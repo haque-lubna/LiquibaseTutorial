@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: a9294090-5637-45a3-933e-dfc037ba0847
+      author: author(lubna)
+      changes:
+        - loadData:
+            file: projects.csv
+            relativeToChangelogFile: true
+            tableName: projects
+            quotchar: '"'

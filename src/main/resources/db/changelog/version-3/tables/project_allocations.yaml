@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1dc05a13-d299-4b70-abe2-e15120c41f9f
+      author: author(lubna)
+      changes:
+        - createTable:
+            tableName: project_allocations
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    primaryKeyName: project_allocations_id
+              - column:
+                  name: employee_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: project_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: allocation_date
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: allocated_by
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: project_allocations
+            baseColumnNames: employee_id
+            referencedTableName: employees
+            referencedColumnNames: id
+            constraintName: fk_project_allocation_employee
+            onUpdate: CASCADE
+            onDelete: CASCADE
+
+        - addForeignKeyConstraint:
+            baseTableName: project_allocations
+            baseColumnNames: project_id
+            referencedTableName: projects
+            referencedColumnNames: id
+            constraintName: fk_project_allocation_project
+            onUpdate: CASCADE
+            onDelete: CASCADE
+
+        - addUniqueConstraint:
+            tableName: project_allocations
+            columnNames: employee_id, project_id
+            constraintName: uc_project_allocation_employee_project

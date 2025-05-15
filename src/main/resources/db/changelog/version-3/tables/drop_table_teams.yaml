@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5c9a0f26-0ef8-4e28-9a03-137c9bb4df7e
+      author: author(lubna)
+      changes:
+        - dropTable:
+            tableName: teams
+            cascadeConstraints: true

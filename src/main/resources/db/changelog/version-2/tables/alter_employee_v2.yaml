@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 87f3b55c-9a8c-42a7-b90c-b4e9f1fc4e2f
+      author: author(lubna)
+      changes:
+        - dropColumn:
+            columnName: employee_id
+            tableName: employees
+        - addColumn:
+            tableName: employees
+            columns:
+              - column:
+                  name: email
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: true

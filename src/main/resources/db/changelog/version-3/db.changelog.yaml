@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: tables/drop_table_teams.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: tables/project_allocations.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: seeds/employees.seed.changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: seeds/projects.seed.changelog.yaml
+      relativeToChangelogFile: true

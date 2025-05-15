@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: tables/alter_employee_v2.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: tables/project.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: tables/team.yaml
+      relativeToChangelogFile: true

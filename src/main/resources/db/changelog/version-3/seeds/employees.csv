@@ -1,0 +1,5 @@
+first_name,last_name,status,phone,email
+John,Doe,ACTIVE,017025415896,john@gmail.com
+Alice,Smith,ACTIVE,014785621451,alice@gmail.com
+Bob,William,ACTIVE,01857456932,bob@gmail.com
+Carol,Taylor,INACTIVE,0169874521,carol@gmail.com

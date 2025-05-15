@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3e1b9f50-a776-4d97-8c78-fb8e6a2b6a88
+      author: author(lubna)
+      changes:
+        - createTable:
+            tableName: teams
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+                    primaryKeyName: team_id_pk
+              - column:
+                  name: name
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: floor
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: room
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: member_count
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP

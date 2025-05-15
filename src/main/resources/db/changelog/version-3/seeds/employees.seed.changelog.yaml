@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: a9294090-5637-45a3-933e-dfc037ba0b16
+      author: author(lubna)
+      changes:
+        - loadData:
+            file: employees.csv
+            relativeToChangelogFile: true
+            tableName: employees
+            quotchar: '"'
